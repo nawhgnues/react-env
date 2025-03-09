@@ -1,5 +1,6 @@
 const Text = () => {
-  return <div>Text</div>;
+  const txt = 'pizza';
+  return <div>{txt}</div>;
 };
 
 export default Text;
