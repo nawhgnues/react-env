@@ -7,7 +7,7 @@ function App() {
   const { count, increment, decrement } = useCounter(0);
 
   return (
-    <>
+    <div className="w-screen h-screen flex flex-col justify-center items-center gap-10">
       <div>
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -16,11 +16,11 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1 className="text-red-500">Vite + React</h1>
       <div className="card">
         <button onClick={() => increment()}>+</button>
         <button onClick={() => decrement()}>-</button>
-        <Text />
+        <Text txt="text" />
         count is {count}
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
@@ -29,7 +29,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </div>
   );
 }
 

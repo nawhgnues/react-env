@@ -1,0 +1,29 @@
+name: Lint and Test 
+
+on: push
+
+jobs: 
+    lint-and-test:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v4
+        
+        - name: Setup pnpm
+          uses: pnpm/action-setup@v2
+          with:
+            version: 9.15.0
+
+        - name: Setup Node
+          uses: actions/setup-node@v4
+          with:
+            node-version: '20'
+             
+        - name: Install Dependencies
+          run: pnpm i --frozen-lockfile
+
+        - name: Run Lint
+          run: pnpm run lint
+        
+        - name: Run Test
+          run: pnpm run test

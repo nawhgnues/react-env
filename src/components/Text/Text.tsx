@@ -1,5 +1,4 @@
-const Text = () => {
-  const txt = 'pizza';
+const Text = ({ txt }: { txt: string }) => {
   return <div>{txt}</div>;
 };
 
